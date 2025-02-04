@@ -1,4 +1,3 @@
-```markdown
 # Contacts Web Application
 
 This is a simple **Contacts Web Application** that allows users to perform CRUD operations (Create, Read, Update, Delete) on contact information. The project is built using:
@@ -41,6 +40,7 @@ This is a simple **Contacts Web Application** that allows users to perform CRUD 
 ## ⚙️ Installation and Setup
 
 ### **Backend (Django)**
+
 1. Navigate to the backend directory:
    ```bash
    cd backend
@@ -69,6 +69,7 @@ This is a simple **Contacts Web Application** that allows users to perform CRUD 
 ---
 
 ### **Frontend (React)**
+
 1. Navigate to the frontend directory:
    ```bash
    cd ../frontend
@@ -86,17 +87,18 @@ This is a simple **Contacts Web Application** that allows users to perform CRUD 
 
 ---
 
-✅ Running the Application Locally
-Start the Backend Server:
-Ensure the Django server is running on http://127.0.0.1:8000/.
+### ✅ Running the Application Locally
 
-Start the Frontend Server:
-Ensure the React app is running on http://localhost:3000/.
+- **Start the Backend Server:**  
+  Ensure the Django server is running on `http://127.0.0.1:8000/`.
 
-Testing:
-Open your browser and navigate to http://localhost:3000/ to test the application.
+- **Start the Frontend Server:**  
+  Ensure the React app is running on `http://localhost:3000/`.
 
-Add, update, delete, and view contacts to verify backend and frontend integration.
+- **Testing:**  
+  Open your browser and navigate to `http://localhost:3000/` to test the application.
+
+  Add, update, delete, and view contacts to verify backend and frontend integration.
 
 ---
 
@@ -119,6 +121,7 @@ Add, update, delete, and view contacts to verify backend and frontend integratio
 
 ### **API Testing**
 Use Postman or any API testing tool:
+
 - `GET /api/contacts/` → Retrieve all contacts.
 - `POST /api/contacts/` → Add a new contact.
 - `PUT /api/contacts/<id>/` → Update a contact.
@@ -142,4 +145,4 @@ Use Postman or any API testing tool:
 ## 🤝 Contributors
 
 - **Your Name** - Ananya Anand
-```
+
