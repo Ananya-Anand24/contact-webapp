@@ -1,152 +1,144 @@
 ```markdown
-# Contact Web Application
+# Contacts Web Application
 
-A simple contact management web application.
+This is a simple **Contacts Web Application** that allows users to perform CRUD operations (Create, Read, Update, Delete) on contact information. The project is built using:
 
-## Table of Contents
-
-- [Cloning the Repository](#cloning-the-repository)
-- [Installing Dependencies](#installing-dependencies)
-- [Running Locally](#running-locally)
-- [Deploying to Production](#deploying-to-production)
+- **Backend:** Django (Python)
+- **Frontend:** React (JavaScript)
+- **Database:** MySQL
 
 ---
 
-## Cloning the Repository
+## 🚀 Features
 
-To clone this repository, follow these steps:
-
-1. Open **Command Prompt** or **PowerShell** on **Windows**, or **Terminal** on **Mac**.
-2. Run the following command to clone the repository:
-
-```bash
-git clone https://github.com/Ananya-Anand24/contact-webapp.git
-```
-
-3. Navigate to the cloned directory:
-
-```bash
-cd contact-webapp
-```
+- Manage contacts with fields: Name, Email, Phone.
+- RESTful API for backend operations.
+- Dynamic user interface using React.
+- Backend built with Django REST Framework.
+- MySQL database for storing contact information.
 
 ---
 
-## Installing Dependencies
+## 🛠️ Technologies Used
 
-Before running the application, you need to install the required dependencies. Ensure you have the following installed:
-
-- **[Git](https://git-scm.com/)** (for cloning the repository)
-- **[Node.js](https://nodejs.org/)** (includes npm)
-
-### Install Dependencies on Windows:
-
-1. Open **Command Prompt** or **PowerShell**.
-2. In the project root directory, run the following command to install the necessary dependencies:
-
-```bash
-npm install
-```
-
-### Install Dependencies on Mac:
-
-1. Open **Terminal**.
-2. In the project root directory, run the following command to install the necessary dependencies:
-
-```bash
-npm install
-```
-
-This will install all the dependencies listed in `package.json`.
+- **Backend:** Django, Django REST Framework
+- **Frontend:** React
+- **Database:** MySQL
+- **Other Tools:** Axios, dotenv
 
 ---
 
-## Running Locally
+## 📋 Instructions to Clone the Repository
 
-After installing the dependencies, you can run the application locally.
-
-### Running Locally on Windows:
-
-1. Open **Command Prompt** or **PowerShell** in the project directory.
-2. Run the following command to start the development server:
-
-```bash
-npm start
-```
-
-3. The application will be available at `http://localhost:3000` in your web browser.
-
-### Running Locally on Mac:
-
-1. Open **Terminal** in the project directory.
-2. Run the following command to start the development server:
-
-```bash
-npm start
-```
-
-3. The application will be available at `http://localhost:3000` in your web browser.
-
----
-
-## Deploying to Production
-
-To deploy the application to a production environment, you can use any cloud platform. Below are high-level steps for deploying to [AWS](https://aws.amazon.com/), [GCP](https://cloud.google.com/), and [Azure](https://azure.microsoft.com/).
-
-### Recommended Cloud Platform: AWS (Amazon Web Services)
-
-Here’s a brief overview of deploying the app on AWS from **both Windows** and **Mac** environments:
-
-1. **Set up an EC2 instance**:
-   - Log into your [AWS account](https://aws.amazon.com/).
-   - Launch a new EC2 instance with your preferred OS (e.g., Amazon Linux or Ubuntu).
-   - Connect to the EC2 instance via SSH (you can use **PuTTY** on Windows or **Terminal** on Mac for SSH).
-
-2. **Install Node.js on EC2**:
-   - SSH into your EC2 instance.
-   - Install Node.js and npm:
-
+1. **Clone the Repository:**
    ```bash
-   sudo apt update
-   sudo apt install nodejs npm
-   ```
-
-3. **Clone the repository**:
-   - Run the following commands on your EC2 instance:
-
-   ```bash
-   git clone https://github.com/Ananya-Anand24/contact-webapp.git
+   git clone https://github.com/Ananya-Anand24/contact-webapp
    cd contact-webapp
    ```
 
-4. **Install dependencies**:
+---
 
-```bash
-npm install
-```
+## ⚙️ Installation and Setup
 
-5. **Start the application**:
+### **Backend (Django)**
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
 
-```bash
-npm start
-```
+2. Create a virtual environment and activate it:
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate  # On Windows
+   source venv/bin/activate  # On macOS/Linux
+   ```
 
-6. **Access the application**:
-   - Ensure the EC2 instance’s security group allows inbound traffic on port 3000.
-   - Open a web browser and go to `http://<EC2_PUBLIC_IP>:3000`.
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-You may also use services like [Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) for easier deployment management.
+4. **Database Schema Already Setup:**  
+   Migrations have already been applied and are included in the repository.
+
+5. **Run the backend server:**
+   ```bash
+   python manage.py runserver
+   ```
 
 ---
 
-### Alternative Cloud Platforms
+### **Frontend (React)**
+1. Navigate to the frontend directory:
+   ```bash
+   cd ../frontend
+   ```
 
-You can also deploy to other platforms like GCP or Azure, following these general steps:
+2. Install frontend dependencies:
+   ```bash
+   npm install
+   ```
 
-- **For GCP**: You can use [Google Cloud App Engine](https://cloud.google.com/appengine) or a Compute Engine instance.
-- **For Azure**: You can deploy using [Azure App Services](https://azure.microsoft.com/en-us/services/app-service/).
+3. Run the React development server:
+   ```bash
+   npm start
+   ```
 
-For more information on deploying to these platforms, consult their respective documentation:
+---
 
-- [GCP Deployment Guide](https://cloud.google.com/docs)
-- [Azure Deployment Guide](https://learn.microsoft.com/en-us/azure/app-service/)
-```
+✅ Running the Application Locally
+Start the Backend Server:
+Ensure the Django server is running on http://127.0.0.1:8000/.
+
+Start the Frontend Server:
+Ensure the React app is running on http://localhost:3000/.
+
+Testing:
+Open your browser and navigate to http://localhost:3000/ to test the application.
+
+Add, update, delete, and view contacts to verify backend and frontend integration.
+
+---
+
+## ✅ Testing the Web Application
+
+### **Pre-Configured Database and Schema**
+- The database schema is already included through migrations.
+- No manual migration steps are required.
+- Use **MySQL** to inspect or verify contact records.
+
+### **Testing CRUD Operations**
+1. **Open the App:**  
+   Navigate to `http://localhost:3000/` to test the application.
+
+2. **Test CRUD Operations:**
+   - Add new contacts.
+   - View existing contacts.
+   - Update contact details.
+   - Delete contacts.
+
+### **API Testing**
+Use Postman or any API testing tool:
+- `GET /api/contacts/` → Retrieve all contacts.
+- `POST /api/contacts/` → Add a new contact.
+- `PUT /api/contacts/<id>/` → Update a contact.
+- `DELETE /api/contacts/<id>/` → Delete a contact.
+
+---
+
+## 🌐 High-Level Deployment Instructions
+
+### **Backend Deployment**
+- Recommended Platform: **AWS EC2** or **Render**.
+- Use **Gunicorn** and **Nginx** for production deployment.
+
+### **Frontend Deployment**
+- Recommended Platform: **Netlify** or **Vercel**.
+- Build and deploy the frontend with:
+   ```bash
+   npm run build
+   ```
+
+## 🤝 Contributors
+
+- **Your Name** - Ananya Anand
