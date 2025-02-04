@@ -1,0 +1,328 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: none;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Header */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #121212;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 10px;
+}
+
+
+/* Search Bar */
+.search-container {
+    width: 95%; /* Make search box take full width */
+    margin-top: 70px; /* Space between h1 and search */
+    margin-bottom: 20px; /* Space below search */
+    background: white;
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.search-container input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Add Contact Button */
+.add-contact-btn {
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    margin: 10px;
+    background-color: #111827;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-contact-btn:hover {
+    background-color: #1f2937;
+}
+
+/* Contact List */
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px); 
+    gap: 10px; 
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10px;
+    justify-content: flex-start; /* Align to the left */
+}
+
+.contact-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    max-width: 365px; 
+    width: 100%; /* Allow card to take full width of its grid cell */
+    box-sizing: border-box; 
+}
+
+.contact-item span {
+    display: flex; /* Make spans flex containers for icon alignment */
+    align-items: center; 
+    margin-bottom: 8px;
+}
+
+.contact-item span:first-child { /* Style the name */
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 25px; 
+    color: #111827;
+}
+
+.contact-item span:not(:first-child) { /* Style other details */
+    color: #6B7280; /* Lighter gray */
+    font-size: 0.9rem; /* Smaller font size */
+    margin-bottom: 4px; /* Space below each detail */
+}
+
+.contact-item .btn {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.contact-item .btn button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex; 
+    align-items: center;
+}
+
+.contact-item .edit-btn {
+    color: #111827;
+}
+
+.contact-item .delete-btn {
+    color: #dc2626;
+}
+
+.contact-item button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.contact-item svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.btn button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn .edit-btn {
+    color: #111827;
+}
+
+.btn .delete-btn {
+    color: #dc2626;
+}
+
+.btn button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+    position: relative;
+}
+
+.modal-content h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.contact-form button[type="submit"] {
+    background-color: #111827;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #1f2937;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Success/Error Messages */
+.success-message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+.error-message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) { 
+    .container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller heading */
+        margin-bottom: 25px;
+    }
+
+    .search-container {
+        width: 90%;
+        margin-top: 60px; /* Adjust spacing */
+        padding: 10px;
+    }
+
+    .add-contact-btn {
+        margin-bottom: 25px;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        padding: 8px 12px;
+    }
+
+    .contact-list {
+        grid-template-columns: 1fr; /* Only 1 column on smaller screens */
+        gap: 10px; 
+    }
+    
+
+    .contact-item {
+        padding: 15px; /* Reduce padding inside cards */
+    }
+
+    .contact-item span {
+        font-size: 0.95rem; /* Slightly smaller font */
+        margin-bottom: 6px;
+    }
+
+    .contact-item span:first-child {
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+}
+
+
+@media (max-width: 500px) { 
+    .contact-list {
+        grid-template-columns: 1fr; /* Only 1 column on smaller screens */
+        gap: 10px; 
+    }
+
+    .contact-item {
+        padding: 10px; /* Reduce padding inside cards */
+    }
+
+    .add-contact-btn {
+        margin-bottom: 25px;
+        
+    }
+}
