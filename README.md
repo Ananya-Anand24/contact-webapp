@@ -1,5 +1,3 @@
-Certainly! Here’s the entire README in code format:
-
 ```markdown
 # Contact Web Application
 
