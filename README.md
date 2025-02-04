@@ -149,3 +149,4 @@ For more information on deploying to these platforms, consult their respective d
 
 - [GCP Deployment Guide](https://cloud.google.com/docs)
 - [Azure Deployment Guide](https://learn.microsoft.com/en-us/azure/app-service/)
+```
